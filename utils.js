@@ -68,7 +68,7 @@ reload_badge = function (manual) {
         clearInterval(set_interval_id);
         set_interval_id = setInterval(reload_badge, refresh_interval);
     }
-    $.getJSON("https://www.bitstamp.net/api/ticker/", function (data) {
+    $.getJSON("https://www.bitstamp.net/api/v2/ticker/btcusd", function (data) {
         if (!data && !data.last) {
             return;
         }
